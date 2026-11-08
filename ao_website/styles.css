@@ -1,5 +1,5 @@
 
-:root{--navy:#172a35;--slate:#263e49;--gold:#c9a77b;--ivory:#f2f0e9;--white:#fff;--ink:#101a20;--muted:#b8c0c0}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Arial, sans-serif}h1,h2,h3,.serif,.brand{font-family:Georgia,'Times New Roman',serif;font-weight:400}button,a{font:inherit}.top{height:76px;background:#111e25;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;border-bottom:1px solid #ffffff28;position:sticky;top:0;z-index:10}.brand{font-size:30px;letter-spacing:-1px}.brand span{color:var(--gold)}.tag{font:italic 17px Georgia;color:var(--gold);border-left:1px solid #263E49;padding-left:18px;margin-left:16px}.nav{display:flex;gap:30px}.nav button{background:none;border:0;color:#eee;cursor:pointer;padding:12px 0;border-bottom:2px solid transparent}.nav button.active,.nav button:hover{border-color:var(--gold);color:var(--gold)}.page{display:none}.page.active{display:block}.hero{min-height:540px;background:linear-gradient(90deg,#101d24 0%,#101d24ed 30%,#101d2450 67%,#101d2440 100%),url(url(assets/courtroom-hero.png)) center/cover;color:white;display:flex; align-items:center;padding:80px 8vw}.hero-copy{max-width:560px}
+:root{--navy:#172a35;--slate:#263e49;--gold:#c9a77b;--ivory:#f2f0e9;--white:#fff;--ink:#101a20;--muted:#b8c0c0}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Arial, sans-serif}h1,h2,h3,.serif,.brand{font-family:Georgia,'Times New Roman',serif;font-weight:400}button,a{font:inherit}.top{height:76px;background:#111e25;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;border-bottom:1px solid #ffffff28;position:sticky;top:0;z-index:10}.brand{font-size:30px;letter-spacing:-1px}.brand span{color:var(--gold)}.tag{font:italic 17px Georgia;color:var(--gold);border-left:1px solid #263E49;padding-left:18px;margin-left:16px}.nav{display:flex;gap:30px}.nav button{background:none;border:0;color:#eee;cursor:pointer;padding:12px 0;border-bottom:2px solid transparent}.nav button.active,.nav button:hover{border-color:var(--gold);color:var(--gold)}.page{display:none}.page.active{display:block}.hero{min-height:540px;background:linear-gradient(90deg,#101d24 0%,#101d24ed 30%,#101d2450 67%,#101d2440 100%),url(assets/courtroom-hero.png) center/cover;color:white;display:flex; align-items:center;padding:80px 8vw}.hero-copy{max-width:560px}
 
 .eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:bold}
 
@@ -581,7 +581,7 @@
             rgba(16, 31, 39, 0.55) 55%,
             rgba(16, 31, 39, 0.08) 100%
         ),
-        url("assets/courtroom-hero.png");
+            url(assets/courtroom-hero.png);
 
     background-size: cover;
     background-position: center;
