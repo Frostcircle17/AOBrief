@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the Privacy Policy of O&A Brief to understand how we collect, use and protect information.">
+    <title>Privacy Policy | O&A Brief</title>
+
+    <style>
+        :root {
+            --navy: #111E25;
+            --cream: #FCF1E0;
+            --gold: #C9A77B;
+            --text: #26343A;
+            --muted: #69757A;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #F8F7F3;
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+        }
+
+        .site-header {
+            height: 76px;
+            background: #111e25;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6vw;
+            border-bottom: 1px solid #ffffff28;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .site-header__identity {
+            display: flex;
+            align-items: center;
+        }
+
+        .site-header__brand {
+            color: inherit;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 30px;
+            font-weight: 400;
+            letter-spacing: -1px;
+            line-height: normal;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: color .25s ease, text-shadow .25s ease;
+        }
+
+        .site-header__brand span {
+            color: var(--gold);
+            transition: text-shadow .25s ease;
+        }
+
+        .site-header__brand:hover,
+        .site-header__brand:focus-visible {
+            color: #fff8e9;
+            text-shadow: 0 0 4px #fff, 0 0 10px rgba(255, 224, 175, .95), 0 0 24px rgba(201, 167, 123, .85), 0 0 40px rgba(201, 167, 123, .55);
+        }
+
+        .site-header__brand:hover span,
+        .site-header__brand:focus-visible span {
+            text-shadow: 0 0 4px #fff, 0 0 12px rgba(255, 224, 175, 1), 0 0 28px rgba(201, 167, 123, .95);
+        }
+
+        .site-header__tagline {
+            color: var(--gold);
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 17px;
+            line-height: normal;
+            border-left: 1px solid #263E49;
+            padding-left: 18px;
+            margin-left: 16px;
+            white-space: nowrap;
+        }
+
+        .site-header__nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .site-header__nav a {
+            font: 16px Arial, sans-serif;
+            color: #eee;
+            text-decoration: none;
+            padding: 12px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .site-header__nav a:hover,
+        .site-header__nav a:focus-visible,
+        .site-header__nav a[aria-current="page"] {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .site-header__brand:focus-visible,
+        .site-header__nav a:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 4px;
+        }
+
+        /* PAGE INTRO */
+
+        .page-intro {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 65px 8% 75px;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-size: 13px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .page-intro h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 6vw, 65px);
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .page-intro p {
+            max-width: 650px;
+            color: #D8D8D3;
+            font-size: 16px;
+        }
+
+        /* MAIN CONTENT */
+
+        .content-wrapper {
+            max-width: 1100px;
+            margin: 55px auto;
+            padding: 0 25px;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 55px;
+            align-items: start;
+        }
+
+        .contents {
+            position: sticky;
+            top: 25px;
+            background: var(--white);
+            border: 1px solid #E8E2D8;
+            padding: 25px;
+        }
+
+        .contents h3 {
+            color: var(--navy);
+            font-family: Georgia, serif;
+            font-size: 21px;
+            margin-bottom: 18px;
+        }
+
+        .contents a {
+            display: block;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 8px 0;
+            border-bottom: 1px solid #F0EDE7;
+            transition: 0.3s;
+        }
+
+        .contents a:hover {
+            color: #A77C4F;
+            padding-left: 5px;
+        }
+
+        .policy-content {
+            background: var(--white);
+            padding: 45px;
+            border: 1px solid #E8E2D8;
+        }
+
+        .policy-content section {
+            margin-bottom: 38px;
+            scroll-margin-top: 25px;
+        }
+
+        .policy-content h2 {
+            color: var(--navy);
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #E7D8C5;
+        }
+
+        .policy-content p {
+            color: #4D585D;
+            font-size: 15px;
+            margin-bottom: 13px;
+        }
+
+        .policy-content ul {
+            padding-left: 25px;
+            margin: 12px 0;
+        }
+
+        .policy-content li {
+            color: #4D585D;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .policy-content a {
+            color: #987044;
+            text-decoration: none;
+        }
+
+        .policy-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 35px 6%;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: #C7C8C4;
+            margin-bottom: 12px;
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+            .site-header {
+                height: auto;
+                min-height: 72px;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+                padding: 14px 5vw 8px;
+            }
+
+            .site-header__nav {
+                gap: 22px;
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .site-header__nav a {
+                font-size: 13px;
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .site-header {
+                min-height: auto;
+                align-items: stretch;
+                justify-content: center;
+                gap: 15px;
+                padding: 16px 5vw 10px;
+                background: #101d24;
+            }
+
+            .site-header__identity {
+                min-height: 42px;
+                flex-wrap: nowrap;
+            }
+
+            .site-header__brand {
+                font-size: clamp(27px, 7vw, 36px);
+                letter-spacing: -1.5px;
+            }
+
+            .site-header__tagline {
+                font-size: clamp(12px, 3.3vw, 15px);
+                padding-left: 12px;
+                margin-left: 12px;
+                line-height: 1.3;
+                border-left-color: #52616a;
+            }
+
+            .site-header__nav {
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                scrollbar-width: none;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .site-header__nav::-webkit-scrollbar {
+                display: none;
+            }
+
+            .site-header__nav a {
+                flex: 0 0 auto;
+                padding: 10px 2px 12px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .site-header {
+                padding-left: 4vw;
+                padding-right: 4vw;
+            }
+
+            .site-header__brand {
+                font-size: 25px;
+            }
+
+            .site-header__tagline {
+                font-size: 11px;
+                padding-left: 9px;
+                margin-left: 9px;
+            }
+
+            .site-header__nav {
+                gap: 5px;
+            }
+
+            .site-header__nav a {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .page-intro {
+                padding: 45px 7%;
+            }
+
+            .content-wrapper {
+                display: flex;
+                flex-direction: column;
+                margin: 30px auto;
+                gap: 25px;
+            }
+
+            .contents {
+                position: static;
+                width: 100%;
+            }
+
+            .policy-content {
+                width: 100%;
+                padding: 25px 20px;
+            }
+
+            .policy-content h2 {
+                font-size: 22px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="site-header__identity">
+            <a href="index.html#home" class="site-header__brand" aria-label="O&amp;A home">O&amp;A<span>.</span></a>
+            <span class="site-header__tagline">Beyond the Brief.</span>
+        </div>
+        <nav class="site-header__nav" aria-label="Main navigation">
+            <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </nav>
+    </header>
+
+    <!-- PAGE INTRO -->
+    <section class="page-intro">
+        <div class="eyebrow">LEGAL INFORMATION</div>
+        <h1>Privacy Policy</h1>
+        <p>
+            Your privacy matters to us. This policy explains how O&A Brief
+            collects, uses, maintains and protects information shared
+            through this website.
+        </p>
+    </section>
+
+    <!-- CONTENT -->
+    <main class="content-wrapper">
+
+        <!-- TABLE OF CONTENTS -->
+        <aside class="contents">
+            <h3>Contents</h3>
+            <a href="#introduction">01. Introduction</a>
+            <a href="#information">02. Information We Collect</a>
+            <a href="#use">03. How We Use Your Information</a>
+            <a href="#cookies">04. Cookies</a>
+            <a href="#disclosure">05. Disclosure of Information</a>
+            <a href="#security">06. Data Security and Retention</a>
+            <a href="#rights">07. Your Rights</a>
+            <a href="#third-party">08. Third-Party Links</a>
+            <a href="#changes">09. Changes to This Policy</a>
+            <a href="#contact">10. Contact Us</a>
+        </aside>
+
+        <!-- PRIVACY POLICY TEXT -->
+        <article class="policy-content">
+
+            <section id="introduction">
+                <h2>01. Introduction</h2>
+                <p>
+                    O&A BRIEF (the “Business”, “we”, “us”, or “our”)
+                    respects the privacy of everyone who visits this
+                    website (the “Website”). This Privacy Policy describes
+                    the types of information we may collect from you or
+                    that you may provide when you visit the Website, and
+                    our practices for collecting, using, maintaining,
+                    protecting, and disclosing that information. By using
+                    the Website, you consent to the practices described
+                    in this policy.
+                </p>
+            </section>
+
+            <section id="information">
+                <h2>02. Information We Collect</h2>
+                <p>We may collect the following categories of information:</p>
+                <ul>
+                    <li>
+                        Information you provide to us, such as your name,
+                        email address, telephone number, organization, and
+                        the contents of any message when you contact us,
+                        submit an enquiry, or otherwise correspond with us
+                        through the Website.
+                    </li>
+                    <li>
+                        Information collected automatically, such as your
+                        IP address, browser type, device information, pages
+                        viewed, and the dates and times of your visits,
+                        gathered through cookies and similar technologies
+                        to help the Website function and to understand how
+                        it is used.
+                    </li>
+                </ul>
+            </section>
+
+            <section id="use">
+                <h2>03. How We Use Your Information</h2>
+                <p>
+                    We use the information we collect to respond to your
+                    enquiries and correspondence; to consider applications
+                    for employment or engagement; to operate, maintain, and
+                    improve the Website and its security; to comply with
+                    applicable legal and regulatory obligations; and for
+                    any other purpose disclosed to you at the time the
+                    information is collected. We do not use information
+                    submitted through the Website to solicit work or
+                    advertise, consistent with the rules of the Bar
+                    Council of India.
+                </p>
+            </section>
+
+            <section id="cookies">
+                <h2>04. Cookies</h2>
+                <p>
+                    The Website may use cookies and similar technologies
+                    to remember your preferences (for example,
+                    acknowledgement of our disclaimer and caution notice),
+                    to keep the Website secure, and to understand usage.
+                    Most browsers allow you to refuse or delete cookies;
+                    doing so may affect the functionality of parts of
+                    the Website.
+                </p>
+            </section>
+
+            <section id="disclosure">
+                <h2>05. Disclosure of Information</h2>
+                <p>
+                    We do not sell or rent your personal information. We
+                    may share information with trusted service providers
+                    who support the operation of the Website, and where
+                    required to do so by law, regulation, legal process,
+                    or governmental request, or to protect the rights,
+                    property, or safety of the Business, our clients,
+                    or others.
+                </p>
+            </section>
+
+            <section id="security">
+                <h2>06. Data Security and Retention</h2>
+                <p>
+                    We maintain reasonable administrative, technical, and
+                    physical safeguards designed to protect the information
+                    we hold against loss, misuse, and unauthorized access,
+                    disclosure, alteration, and destruction. However, no
+                    method of transmission over the internet is entirely
+                    secure, and we cannot guarantee absolute security.
+                </p>
+                <p>
+                    We retain personal information for as long as necessary
+                    to fulfill the purposes described in this policy and
+                    to comply with our legal obligations.
+                </p>
+            </section>
+
+            <section id="rights">
+                <h2>07. Your Rights</h2>
+                <p>
+                    Subject to applicable law, including the Digital
+                    Personal Data Protection Act, 2023, you may have the
+                    right to access, correct, update, or request the
+                    erasure of your personal data, to withdraw consent,
+                    and to raise a grievance regarding our handling of
+                    your information. To exercise any of these rights,
+                    please contact us using the details below.
+                </p>
+            </section>
+
+            <section id="third-party">
+                <h2>08. Third-Party Links</h2>
+                <p>
+                    The Website may contain links to third-party websites.
+                    We are not responsible for the privacy practices or
+                    content of those websites, and we encourage you to
+                    review their privacy policies before providing any
+                    information.
+                </p>
+            </section>
+
+            <section id="changes">
+                <h2>09. Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time.
+                    Any changes will be posted on this page with an
+                    updated revision date. Your continued use of the
+                    Website after any change constitutes your acceptance
+                    of the revised policy.
+                </p>
+            </section>
+
+            <section id="contact">
+                <h2>10. Contact Us</h2>
+                <p>
+                    If you have any questions about this Privacy Policy
+                    or wish to exercise your rights, please contact us at:
+                </p>
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:contact@oabrief.com">
+                        contact@oabrief.com
+                    </a>
+                </p>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+    </footer>
+
+</body>
+</html>

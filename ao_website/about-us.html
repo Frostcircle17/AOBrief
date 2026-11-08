@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | O&amp;A — Beyond the Brief</title>
+  <meta name="description" content="Discover O&amp;A Brief, our purpose, our approach and the people behind the initiative.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --oa-ink: #172a35;
+      --oa-navy: #101e26;
+      --oa-cream: #f2f0e9;
+      --oa-paper: #fbfaf6;
+      --oa-gold: #b58b59;
+      --oa-line: #d8d0c3;
+      --oa-muted: #59636a;
+    }
+    body { background:var(--oa-cream); color:var(--oa-ink); }
+    .about-page { display:block!important; background:var(--oa-cream); color:var(--oa-ink); }
+    .about-wrap { width:min(1120px,86%); margin:0 auto; }
+    .about-kicker,.about-label { font:10px Arial,sans-serif; letter-spacing:2.5px; text-transform:uppercase; color:#987044; }
+
+    /* Opening statement */
+    .about-hero { position:relative; overflow:hidden; padding:clamp(82px,11vw,145px) 0 105px; color:#f7f4ed; background:linear-gradient(115deg,#101e26 0%,#172f3a 68%,#203c45 100%); }
+    .about-hero:after { content:"O&A"; position:absolute; right:3vw; bottom:-.23em; color:rgba(255,255,255,.035); font:clamp(170px,27vw,390px)/.8 Georgia,serif; letter-spacing:-.09em; pointer-events:none; }
+    .about-hero .about-wrap { position:relative; z-index:1; }
+    .about-hero .about-kicker { color:#d0ad80; }
+    .about-hero h1 { max-width:900px; margin:25px 0 26px; font:400 clamp(54px,8.2vw,104px)/.98 Georgia,serif; letter-spacing:-.055em; }
+    .about-hero h1 em { color:#c9a77b; font-style:normal; }
+    .about-hero .intro { max-width:670px; margin:0; color:#e0e3df; font:clamp(17px,2vw,21px)/1.8 Georgia,serif; }
+    .about-mark { display:flex; align-items:center; gap:16px; margin-top:42px; color:#d0ad80; font:10px Arial,sans-serif; letter-spacing:2px; text-transform:uppercase; }
+    .about-mark:before { content:""; width:52px; height:1px; background:#c9a77b; }
+
+    /* Story and purpose */
+    .about-story { display:grid; grid-template-columns:.85fr 1.15fr; gap:9%; padding:100px 0; border-bottom:1px solid var(--oa-line); }
+    .about-story h2,.aim-section h2,.people-heading h2 { margin:18px 0; font:400 clamp(34px,4.4vw,56px)/1.12 Georgia,serif; letter-spacing:-.035em; }
+    .about-copy p,.aim-copy p { margin:0 0 19px; color:#39464c; font:16px/1.9 Georgia,serif; }
+    .aim-section { padding:100px 0 105px; border-bottom:1px solid var(--oa-line); }
+    .aim-grid { display:grid; grid-template-columns:1fr 1fr; gap:8%; align-items:start; }
+    .aim-section h2 { max-width:550px; }
+    .aim-copy { padding-top:12px; }
+    .aim-note { margin-top:30px; padding:22px 25px; border-left:3px solid var(--oa-gold); background:#e9e4da; color:#39464c; font:14px/1.85 Georgia,serif; }
+    .principles { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:58px; }
+    .principle { min-height:185px; padding:27px 25px; background:var(--oa-paper); border:1px solid var(--oa-line); }
+    .principle span { color:#987044; font:10px Arial,sans-serif; letter-spacing:1.8px; }
+    .principle h3 { margin:19px 0 10px; color:var(--oa-ink); font:400 22px Georgia,serif; }
+    .principle p { margin:0; color:#59636a; font:14px/1.75 Georgia,serif; }
+
+    /* Founding members */
+    .people-section { padding:100px 0 115px; }
+    .people-heading { display:flex; justify-content:space-between; gap:35px; align-items:end; margin-bottom:45px; }
+    .people-heading h2 { max-width:600px; margin-bottom:0; }
+    .people-heading p { max-width:350px; margin:0; color:#59636a; font:14px/1.8 Georgia,serif; }
+    .people-list { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+    .person-poster { display:flex; flex-direction:column; min-width:0; background:var(--oa-paper); border:1px solid var(--oa-line); color:inherit; text-decoration:none; overflow:hidden; transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease; }
+    .person-poster:hover,.person-poster:focus-visible { transform:translateY(-6px); box-shadow:0 18px 38px rgba(17,30,37,.12); border-color:var(--oa-gold); outline:none; }
+    .person-photo { height:340px; overflow:hidden; background:#e8dfd1; }
+    .person-photo img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 35%; transition:transform .55s ease; }
+    .person-poster:hover .person-photo img { transform:scale(1.04); }
+    .person-info { padding:30px 30px 24px; display:flex; flex:1; flex-direction:column; }
+    .person-role { color:#987044; font:10px Arial,sans-serif; letter-spacing:1.8px; text-transform:uppercase; }
+    .person-info h3 { margin:14px 0 14px; color:var(--oa-ink); font:400 clamp(27px,3vw,37px) Georgia,serif; letter-spacing:-.03em; }
+    .person-info p { margin:0; color:#465158; font:14px/1.85 Georgia,serif; }
+    .person-link { display:flex; justify-content:space-between; align-items:center; margin-top:auto; padding-top:19px; border-top:1px solid var(--oa-line); color:#987044; font:10px Arial,sans-serif; letter-spacing:1.7px; text-transform:uppercase; }
+    .person-link b { font-size:21px; font-weight:400; transition:transform .25s ease; }
+    .person-poster:hover .person-link b { transform:translate(4px,-3px); }
+    .about-footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:18px; padding:26px 7%; background:var(--oa-navy); color:#d5d8d5; font:12px Georgia,serif; }
+    .about-footer a { color:inherit; text-decoration:none; }
+    .about-footer a:hover { color:#c9a77b; }
+
+    @media(max-width:760px) {
+      .about-wrap { width:86%; }
+      .about-hero { padding:76px 0 75px; }
+      .about-story,.aim-grid { grid-template-columns:1fr; gap:24px; }
+      .about-story { padding:70px 0; }
+      .aim-section { padding:72px 0; }
+      .principles { grid-template-columns:1fr; gap:10px; margin-top:38px; }
+      .principle { min-height:0; padding:23px; }
+      .people-section { padding:72px 0 80px; }
+      .people-heading { display:block; margin-bottom:30px; }
+      .people-heading p { margin-top:17px; }
+      .people-list { grid-template-columns:1fr; gap:18px; }
+      .person-photo { height:300px; }
+      .person-info { padding:25px 23px 21px; }
+    }
+    @media(max-width:600px) {
+      .about-hero h1 { font-size:clamp(51px,12vw,72px); }
+      .about-hero .intro { font-size:17px; }
+      .about-mark { font-size:9px; letter-spacing:1.5px; }
+      .about-footer { flex-direction:column; gap:12px; padding:25px 7%; }
+    }
+    @media(prefers-reduced-motion:reduce) { .person-poster,.person-photo img,.person-link b { transition:none!important; } }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div><a class="brand" href="index.html#home" aria-label="O&amp;A home">O&amp;A <span>.</span></a><span class="tag">Beyond the Brief.</span></div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html#home">Home</a>
+      <a class="active" href="about-us.html" aria-current="page">About Us</a>
+      <a href="service.html">Services</a>
+      <a href="connect.html">Connect</a>
+    </nav>
+  </header>
+  <main class="about-page">
+    <section class="about-hero"><div class="about-wrap">
+      <div class="about-kicker">An independent legal initiative</div>
+      <h1>We look beyond<br>the <em>brief.</em></h1>
+      <p class="intro">O&amp;A is a collaborative initiative built around thoughtful legal research, precise drafting assistance and a wider engagement with law, institutions and society.</p>
+      <div class="about-mark">Research · Practice · Perspective</div>
+    </div></section>
+    <section class="about-wrap about-story">
+      <div><div class="about-label">01 — Who we are</div><h2>A shared interest in the law, and the questions beyond it.</h2></div>
+      <div class="about-copy">
+        <p>O&amp;A began with a simple idea: meaningful legal work requires more than reading provisions or preparing documents. It calls for curiosity, careful research, clear communication and an understanding of the people and institutions shaped by the law.</p>
+        <p>We are a student-led, independent legal initiative bringing together our interests in research, drafting, litigation support and legal writing. Through our work, we aim to create a space where legal ideas are examined carefully and knowledge is communicated with clarity.</p>
+        <p>Our work is guided by a collaborative outlook. We seek to engage with advocates, students, researchers and others who value considered legal work and an informed exchange of ideas.</p>
+      </div>
+    </section>
+    <section class="about-wrap aim-section">
+      <div class="aim-grid">
+        <div><div class="about-label">02 — Our aim</div><h2>To make legal work more thoughtful, accessible and purposeful.</h2></div>
+        <div class="aim-copy">
+          <p>Our aim is to contribute to the legal ecosystem through dependable research and drafting assistance, organised litigation-support work and accessible legal knowledge. We want to approach each assignment with attention to detail while keeping the larger purpose of the work in view.</p>
+          <p>We also hope to build a platform for legal writing and discussion — one that encourages young legal minds to engage with contemporary developments, examine legal reasoning and share perspectives responsibly.</p>
+          <div class="aim-note">We believe that precision matters, but so does perspective. Our guiding thought is to look beyond the immediate document and understand the purpose, context and impact behind the work.</div>
+        </div>
+      </div>
+      <div class="principles">
+        <article class="principle"><span>01 / METHOD</span><h3>Research with purpose</h3><p>Careful inquiry, relevant authorities and a clear understanding of the issue.</p></article>
+        <article class="principle"><span>02 / APPROACH</span><h3>Drafting with precision</h3><p>Structured, considered and detail-oriented assistance with legal documents.</p></article>
+        <article class="principle"><span>03 / OUTLOOK</span><h3>Thinking beyond convention</h3><p>Curiosity about law, institutions and the realities that shape legal questions.</p></article>
+      </div>
+    </section>
+    <section class="about-wrap people-section">
+      <div class="people-heading"><div><div class="about-label">03 — The people behind O&amp;A</div><h2>Two perspectives. One shared initiative.</h2></div><p>O&amp;A is shaped by the interests, learning and work of its two founding members. Get to know the people behind the initiative.</p></div>
+      <div class="people-list">
+        <a class="person-poster" href="https://www.linkedin.com/in/avnish-pratap-singh-93549631b" target="_blank" rel="noopener noreferrer" aria-label="View Avnish Pratap Singh on LinkedIn">
+          <div class="person-photo"><img src="assets/founder-photo-1.jpg" alt="Avnish Pratap Singh working at a laptop"></div>
+          <div class="person-info"><div class="person-role">Founding Member</div><h3>Avnish Pratap Singh</h3><p>A Law student with interests in legal research, constitutional and criminal law, litigation and legal writing. His experience includes research assignments, case analysis, drafting assistance and litigation-oriented work across chambers and legal organisations.</p><div class="person-link"><span>View LinkedIn profile</span><b aria-hidden="true">↗</b></div></div>
+        </a>
+        <a class="person-poster" href="https://www.linkedin.com/in/om-kumar-1651942aa/" target="_blank" rel="noopener noreferrer" aria-label="View Om Kumar on LinkedIn">
+          <div class="person-photo"><img src="assets/founder-photo-2.jpg" alt="Om Kumar working at a laptop"></div>
+          <div class="person-info"><div class="person-role">Founding Member</div><h3>Om Kumar</h3><p>A law student with interests in intellectual property, arbitration, dispute resolution and legal drafting. His experience spans research and drafting assignments, trademark matters, arbitration-related work and litigation support.</p><div class="person-link"><span>View LinkedIn profile</span><b aria-hidden="true">↗</b></div></div>
+        </a>
+      </div>
+    </section>
+    <div class="about-footer"><span><a href="terms-and-conditions.html">Terms and Conditions</a></span><span>Independent legal initiative</span><span><a href="privacy-policy.html">Privacy Policy</a></span></div>
+  </main>
+  <script defer src="script.js"></script>
+</body>
+</html>
